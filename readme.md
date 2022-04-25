@@ -206,3 +206,14 @@ buildQuiz(selector, [options]);
 ```js
   const results = JSON.parse(localStorage.getItem('quizResult'));
 ```
+
+## Проверка ответов
+
+В случае необходимости, имеется возможность проверить правильность внесенных верных ответов на квиз. Для этого после инициализации необходимо воспользоваться методом `showAnswers`. Вопросы и верные для них ответы (в соотвествии с заданными параметрами) будут выведены в консоль. Пример:
+```js
+const quiz = buildQuiz(selector, {
+  answers: [1, 2, 3];
+});
+quiz.showAnswers();
+```
+<img src="https://sun9-29.userapi.com/s/v1/if2/5XPSlCtzb9EUSXnA5uSFquNUko6GRw4APnWKwKz8YJ_oHHDM4QEGc2gJKqsroKSdNpQ1e4Q_-iZcKpEMtmWhiKhu.jpg?size=163x142&quality=96&type=album" width="200" alt="Пример вывода ответов"/>
