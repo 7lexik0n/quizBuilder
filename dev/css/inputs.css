@@ -1,0 +1,37 @@
+.input__wrapper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input,
+.selectus__button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.input:focus,
+.input:active {
+  border: 2px solid royalBlue;
+}
+
+.input__invalid,
+.input__invalid:focus,
+.input__invalid:active {
+  border: 2px solid tomato;
+}
+
+.input__error {
+  color: tomato;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+
+.input__error_hidden {
+  display: none;
+}

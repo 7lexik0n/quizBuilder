@@ -1,0 +1,158 @@
+.quiz__content {
+  position: relative;
+}
+
+.quiz__slide {
+  display: none;
+}
+
+.quiz__slide * {
+  box-sizing: border-box;
+}
+
+.quiz__slide_active {
+  display: block;
+}
+
+.quiz__slide.hidding {
+  position: relative;
+  animation: hidding 500ms ease both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.quiz__slide.showing {
+  position: relative;
+  display: block;
+  animation: showing 500ms ease both;
+}
+
+@keyframes hidding {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes showing {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.quiz__question {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quiz__answers {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.quiz__answer {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  
+}
+
+.quiz__answer:hover,
+.quiz__answer_choosen {
+  background: royalBlue;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.quiz__buttonsWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.quiz__button {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quiz__button_next,
+.quiz__button_finish {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.quiz__button:hover {
+  background: royalBlue;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.quiz__progress {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.quiz__progress p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.quiz__progress_out {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 8px;
+  border-radius: 20px;
+  background: #ccc;
+  margin-bottom: 15px;
+}
+
+.quiz__progress_in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: royalBlue;
+  border-radius: 20px;
+  transition: all 500ms;
+}
